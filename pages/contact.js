@@ -97,7 +97,7 @@ function Contact() {
               transition={{ duration: 0.5 }}
             >
               <Link
-                href='#'
+                href='/'
                 className='heading flex items-center mb-6 text-2xl font-semibold text-green-900 dark:text-green-200'
               >
                 <img
@@ -108,7 +108,7 @@ function Contact() {
                   src='https://media.discordapp.net/attachments/1054436485421604944/1054442438682492998/cobra.png?width=698&height=670'
                   alt='logo'
                 />
-                Contact The Cobras
+                The Cobras
               </Link>
             </motion.div>
             <motion.div
