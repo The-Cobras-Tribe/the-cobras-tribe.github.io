@@ -42,7 +42,12 @@ function Contact() {
     <>
       <Head>
         <title>Contact The Cobras Of Action</title>
-        <meta name='description' content='Cobras Of Action' />
+        <meta
+          name='description'
+          content='
+          Contact us and we will get back to you as soon as possible. Whether we agree with you is another story.
+        '
+        />
         <link
           rel='icon'
           href='

@@ -48,7 +48,10 @@ function App() {
     <>
       <Head>
         <title>Cobras Of Action</title>
-        <meta name='description' content='Cobras Of Action' />
+        <meta
+          name='description'
+          content='Meet the cobras who are always ready to take action. Contact us to learn more or to tell something. We always listen. Whether we agree or not is another story.'
+        />
         <link
           rel='icon'
           href='
