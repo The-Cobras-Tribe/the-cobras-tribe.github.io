@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import { useInView } from "react-intersection-observer";
 import AboutUs from "../components/aboutus";
+import Header from "../components/header";
 import Quote from "../components/quote";
 
 function App() {
@@ -36,7 +37,8 @@ function App() {
         />
       </Head>
 
-      <main className='bg-main min-h-screen'>
+      <main className='bg-main min-h-screen w-full'>
+        <Header />
         <section>
           <div className='grid place-items-center max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12'>
             <div className='mr-auto place-self-center lg:col-span-7'>
