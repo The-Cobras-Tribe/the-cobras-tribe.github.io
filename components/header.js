@@ -14,7 +14,11 @@ function Header() {
   }, []);
 
   return (
-    <nav className='flex items-center justify-between flex-wrap bg-stone-900/50 p-6'>
+    <nav
+      className='flex items-center justify-between flex-wrap bg-stone-900/50 p-6
+     backdrop-filter backdrop-blur-lg
+    '
+    >
       <div className='flex items-center flex-no-shrink text-green-100 mr-6'>
         <img
           src='https://media.discordapp.net/attachments/1054436485421604944/1054442438682492998/cobra.png?width=698&height=670'
