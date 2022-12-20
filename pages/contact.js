@@ -117,10 +117,10 @@ function Contact() {
               initial='hidden'
               animate={inView2 ? "visible" : "hidden"}
               transition={{ duration: 0.5 }}
-              className='formitself w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-stone-800/50 dark:border-gray-700 backdrop-blur-sm'
+              className='formitself w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-stone-800/50 dark:border-emerald-700 backdrop-blur-sm'
             >
               <div className=' p-6 space-y-4 md:space-y-6 sm:p-8'>
-                <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-green-100'>
+                <h1 className='text-xl font-bold leading-tight tracking-tight text-stone-900 md:text-2xl dark:text-green-100'>
                   The Cobras Listen. Whether Or Not We Agree Is Another Story.
                 </h1>
 
@@ -135,7 +135,7 @@ function Contact() {
                     >
                       <label
                         for='email'
-                        className='block mb-2 text-sm font-medium text-gray-900 dark:text-green-100'
+                        className='block mb-2 text-sm font-medium text-stone-900 dark:text-green-100'
                       >
                         Your email
                       </label>
@@ -143,7 +143,7 @@ function Contact() {
                         type='email'
                         name='email'
                         id='email'
-                        className='bg-stone-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-stone-700/50 dark:border-gray-600 dark:placeholder-gray-400 dark:text-green-100 dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        className='bg-stone-50 border border-emerald-300 text-stone-900 sm:text-sm rounded-lg focus:ring-emerald-600 focus:border-emerald-600 block w-full p-2.5 dark:bg-stone-700/50 dark:border-emerald-600 dark:placeholder-stone-400 dark:text-green-100 dark:focus:ring-emerald-500 dark:focus:border-emerald-500'
                         placeholder='
                         username@server.com
                         '
@@ -161,14 +161,14 @@ function Contact() {
                       <div className='mt-6'>
                         <label
                           for='default-input'
-                          className='block mb-2 text-sm font-medium text-gray-900 dark:text-green-100'
+                          className='block mb-2 text-sm font-medium text-stone-900 dark:text-green-100'
                         >
                           Your name
                         </label>
                         <input
                           type='text'
                           id='default-input'
-                          className='bg-stone-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-stone-700/50 dark:border-gray-600 dark:placeholder-gray-400 dark:text-green-100 dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                          className='bg-stone-50 border border-emerald-300 text-stone-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5 dark:bg-stone-700/50 dark:border-emerald-600 dark:placeholder-stone-400 dark:text-green-100 dark:focus:ring-emerald-500 dark:focus:border-emerald-500'
                           placeholder='What should we call you?'
                           onChange={(e) => setName(e.target.value)}
                         />
@@ -184,7 +184,7 @@ function Contact() {
                     >
                       <label
                         for='large-input'
-                        className='block mb-2 text-sm font-medium text-gray-900 dark:text-green-100'
+                        className='block mb-2 text-sm font-medium text-stone-900 dark:text-green-100'
                         onChange={(e) => setName(e.target.value)}
                       >
                         Your message
@@ -192,7 +192,7 @@ function Contact() {
                       <textarea
                         id='message'
                         rows='4'
-                        className='block p-2.5 w-full text-sm text-gray-900 bg-stone-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-stone-700/50 dark:border-gray-600 dark:placeholder-gray-400 dark:text-green-100 dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        className='block p-2.5 w-full text-sm text-stone-900 bg-stone-50 rounded-lg border border-emerald-300 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-stone-700/50 dark:border-emerald-600 dark:placeholder-stone-400 dark:text-green-100 dark:focus:ring-emerald-500 dark:focus:border-emerald-500'
                         placeholder='Describe your project in detail and we will get back to you as soon as possible.'
                         onChange={(e) => setMessage(e.target.value)}
                       ></textarea>

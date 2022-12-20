@@ -93,16 +93,16 @@ function Quote() {
           </div>
         </div>
       </section>
-      <section className='bg-white p-12 dark:bg-stone-900/80 backdrop-filter backdrop-blur-lg'>
+      <section className='bg-white p-12 py-24 dark:bg-stone-900/90 backdrop-filter backdrop-blur-lg'>
         <h1 className='text-center w-full mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-6xl xl:text-6xl dark:text-green-300 mb-8'>
-          Choose your own future
+          Choose your own future. <br /> Take the pill you want.
         </h1>
-        <div className='flex gap-8 justify-center'>
+        <div className='mt-12 flex gap-8 justify-center'>
           <button
             onClick={() => {
               window.open("https://www.netflix.com");
             }}
-            className='bg-blue-900 hover:bg-stone-900 text-white font-bold py-2 px-4 rounded'
+            className='border-2 border-blue-400 rounded-full bg-blue-900 hover:bg-stone-900 text-white font-bold py-2 px-4 rounded transition duration-200 ease-in-out transform'
           >
             Blue Pill
           </button>
@@ -110,7 +110,8 @@ function Quote() {
             onClick={() => {
               window.location.href = "/values";
             }}
-            className='bg-red-900 hover:bg-stone-900 text-white font-bold py-2 px-4 rounded'
+            className='bg-red-900 border-2 border-red-400 rounded-full
+            hover:bg-stone-900 text-white font-bold py-2 px-4 rounded transition duration-200 ease-in-out all'
           >
             Red Pill
           </button>
