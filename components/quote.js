@@ -18,7 +18,7 @@ function Quote() {
     "If you can be the man you want your son to be, then you can truly be a man",
     "If I don't feel like working, I'll still work.",
     "You don't get to go through life only doing the things you feel like doing.",
-    "It would be disgusting for my ancestors to have fought saberooth tigers so I can wake my lazy ass up, jerk off all day, and ask on YouTube how I can stop being a fucking loser.",
+    "It would be disgusting for my ancestors to have fought sabertooth tigers so I can wake my lazy ass up, jerk off all day, and ask on YouTube how I can stop being a fucking loser.",
     "I can wake up sad, I can ache, I can have a busy day, stressed, etc. I will complete the same tasks as if I wake up in a fantastic mode.",
     "I have duty to myself and my bloodline.",
     "Depression isn't real.",
