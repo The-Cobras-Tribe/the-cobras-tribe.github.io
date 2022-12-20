@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 /* eslint-disable @next/next/no-img-element */
 function Quote() {
@@ -80,7 +81,7 @@ function Quote() {
           </figure>
 
           <div className='mt-8'>
-            <a
+            <Link
               className='
                 text-green-400
                 underline
@@ -88,7 +89,7 @@ function Quote() {
               href='/values'
             >
               More...
-            </a>
+            </Link>
           </div>
         </div>
       </section>
