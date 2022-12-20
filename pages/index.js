@@ -39,7 +39,10 @@ function App() {
   }, []);
 
   const [ref, inView] = useInView();
+  const [ref1, inView1] = useInView();
   const [ref2, inView2] = useInView();
+  const [ref3, inView3] = useInView();
+  const [ref4, inView4] = useInView();
 
   return (
     <>
@@ -55,7 +58,17 @@ function App() {
       </Head>
 
       <main className='bg-main min-h-screen w-full'>
-        <Header />
+        <motion.div
+          ref={ref1}
+          initial='hidden'
+          animate={inView1 ? "visible" : "hidden"}
+          variants={variants}
+          transition={{ duration: 0.5 }}
+          className='backdrop-filter backdrop-blur-xl'
+        >
+          <Header />
+        </motion.div>
+
         <section>
           <div className='grid place-items-center max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12'>
             <div className='mr-auto place-self-center lg:col-span-7'>
@@ -97,8 +110,26 @@ function App() {
             </motion.div>
           </div>
         </section>
-        <Quote />
-        <AboutUs />
+        <motion.div
+          ref={ref3}
+          initial='hidden'
+          animate={inView3 ? "visible" : "hidden"}
+          variants={variants}
+          transition={{ duration: 0.5 }}
+          className='backdrop-filter backdrop-blur-xl'
+        >
+          <Quote />
+        </motion.div>
+        <motion.div
+          ref={ref4}
+          initial='hidden'
+          animate={inView4 ? "visible" : "hidden"}
+          variants={variants}
+          transition={{ duration: 0.5 }}
+          className='backdrop-filter backdrop-blur-xl'
+        >
+          <AboutUs />
+        </motion.div>
       </main>
     </>
   );
