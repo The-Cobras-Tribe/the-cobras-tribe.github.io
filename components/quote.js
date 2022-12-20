@@ -56,7 +56,7 @@ function Quote() {
 
   return (
     <>
-      <section className='bg-white dark:bg-stone-900/80 backdrop-filter backdrop-blur-sm'>
+      <section className='bg-white dark:bg-stone-800/50 backdrop-filter backdrop-blur-lg'>
         <div className='max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6'>
           <h1 className='text-center w-full mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-6xl xl:text-6xl dark:text-green-300 mb-8'>
             Our values and beliefs
@@ -91,6 +91,29 @@ function Quote() {
               More...
             </Link>
           </div>
+        </div>
+      </section>
+      <section className='bg-white p-12 dark:bg-stone-900/80 backdrop-filter backdrop-blur-lg'>
+        <h1 className='text-center w-full mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-6xl xl:text-6xl dark:text-green-300 mb-8'>
+          Choose your own future
+        </h1>
+        <div className='flex gap-8 justify-center'>
+          <button
+            onClick={() => {
+              window.open("https://www.netflix.com");
+            }}
+            className='bg-blue-900 hover:bg-stone-900 text-white font-bold py-2 px-4 rounded'
+          >
+            Blue Pill
+          </button>
+          <button
+            onClick={() => {
+              window.location.href = "/values";
+            }}
+            className='bg-red-900 hover:bg-stone-900 text-white font-bold py-2 px-4 rounded'
+          >
+            Red Pill
+          </button>
         </div>
       </section>
     </>
