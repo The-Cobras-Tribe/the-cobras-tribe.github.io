@@ -4,12 +4,23 @@ import Header from "../components/header";
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
 
 function Values() {
-  const variants = {
+  const [variants, setVariants] = useState({
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 },
-  };
+  });
+
+  useEffect(() => {
+    // screen too small
+    if (window.innerWidth < 768) {
+      setVariants({
+        hidden: { opacity: 1, y: 0 },
+        visible: { opacity: 1, y: 0 },
+      });
+    }
+  }, []);
 
   const [ref, inView] = useInView();
   const [ref1, inView1] = useInView();

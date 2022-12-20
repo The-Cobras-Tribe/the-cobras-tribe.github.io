@@ -1,25 +1,42 @@
 /* eslint-disable @next/next/no-img-element */
 import { motion } from "framer-motion";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import AboutUs from "../components/aboutus";
 import Header from "../components/header";
 import Quote from "../components/quote";
 
 function App() {
-  // animation variations
-
-  const variants = {
+  const [variants, setVariants] = useState({
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 },
-  };
+  });
 
-  // for the logo
+  useEffect(() => {
+    // disable variants if screen is too small
+    if (window.innerWidth < 768) {
+      setVariants({
+        hidden: { opacity: 1, x: 0 },
+        visible: { opacity: 1, x: 0 },
+      });
+    }
+  }, []);
 
-  const logoVariants = {
+  const [logoVariants, setLogoVariants] = useState({
     hidden: { opacity: 0, y: -100, rotate: 180 },
     visible: { opacity: 1, y: 0, rotate: 0 },
-  };
+  });
+
+  useEffect(() => {
+    // disable variants if screen is too small
+    if (window.innerWidth < 768) {
+      setLogoVariants({
+        hidden: { opacity: 1, y: 0, rotate: 0 },
+        visible: { opacity: 1, y: 0, rotate: 0 },
+      });
+    }
+  }, []);
 
   const [ref, inView] = useInView();
   const [ref2, inView2] = useInView();
