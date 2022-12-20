@@ -4,23 +4,12 @@ import Header from "../components/header";
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
 
 function Values() {
-  const [variants, setVariants] = useState({
+  const variants = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 },
-  });
-
-  useEffect(() => {
-    // screen too small
-    if (window.innerWidth < 768) {
-      setVariants({
-        hidden: { opacity: 1, y: 0 },
-        visible: { opacity: 1, y: 0 },
-      });
-    }
-  }, []);
+  };
 
   const [ref, inView] = useInView();
   const [ref1, inView1] = useInView();
@@ -80,7 +69,7 @@ function Values() {
                 <ol
                   className='
                                     list-decimal
-                                    list-outside
+                                    list-inside
                                     list-text-emerald-400
                                     marker:gray-400
                                   '
@@ -273,7 +262,7 @@ function Values() {
                 12 Rules for Life By Jordan B. Peterson
               </h3>
               <div className='mb-4 text-emerald-400 p1'>
-                <ol className='list-decimal list-outside'>
+                <ol className='list-decimal list-inside'>
                   <li>Stand up straight with your shoulders back</li>
                   <li>
                     Treat yourself like someone you are responsible for helping
