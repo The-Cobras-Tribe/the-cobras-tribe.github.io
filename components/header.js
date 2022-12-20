@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
 import { Navbar, Button } from "flowbite-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function Header() {
@@ -44,14 +44,14 @@ function Header() {
       {visible && (
         <div className='block flex-grow flex justify-center gap-8 lg:flex lg:items-center lg:w-auto'>
           <div className='text-sm flex justify-end lg:flex-grow'>
-            <a
+            <Link
               href='/'
               className='block mt-4 lg:inline-block lg:mt-0 text-green-100 hover:text-green-100 mr-4'
             >
               <span className='bg-left-bottom bg-gradient-to-r from-blue-500 to-blue-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
                 Home
               </span>
-            </a>
+            </Link>
 
             <a
               href='/values'
