@@ -51,7 +51,7 @@ function SignUp() {
           setPassword("");
           setConfirmPassword("");
           setLoading(false);
-          window.location.href = "/";
+          window.location.href = "/community";
         }
       );
     }
@@ -66,7 +66,7 @@ function SignUp() {
       setPassword("");
       setConfirmPassword("");
       setLoading(false);
-      window.location.href = "/";
+      window.location.href = "/community";
     });
   };
 
