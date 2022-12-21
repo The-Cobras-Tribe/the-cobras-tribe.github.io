@@ -42,6 +42,9 @@ function Replies(props) {
   );
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (content.trim() === "") {
+      return;
+    }
     await addDoc(collection(db, "p", id, "c"), {
       content: content,
       authorId: user.uid,

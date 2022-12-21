@@ -40,6 +40,9 @@ function Community() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (content.trim() === "") {
+      return;
+    }
     await addDoc(collection(db, "p"), {
       content: content,
       authorId: user.uid,
