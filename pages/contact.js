@@ -198,7 +198,7 @@ function Contact() {
                         id='message'
                         rows='4'
                         className='font-sans block p-2.5 w-full text-sm text-stone-900 bg-stone-50 rounded-lg border border-emerald-300 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-stone-700/50 dark:border-emerald-600 dark:placeholder-stone-400 dark:text-green-100 dark:focus:ring-emerald-500 dark:focus:border-emerald-500'
-                        placeholder='Describe your project in detail and we will get back to you as soon as possible.'
+                        placeholder='Give us your thoughts.'
                         onChange={(e) => setMessage(e.target.value)}
                       ></textarea>
                     </motion.div>

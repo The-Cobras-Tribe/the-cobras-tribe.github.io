@@ -28,6 +28,7 @@ function Quote() {
     "Muddy water is best cleared by leaving it alone.",
     "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.",
     "Life without endeavor is like entering a jewel mine and coming out with empty hands.",
+    "Balance is a lie that has been sold to you by people who wanna feel better about themselves that they are average.",
   ];
 
   return (
