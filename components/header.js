@@ -80,16 +80,14 @@ function Header() {
               </span>
             </Link>
     */}
-            {/*
             <Link
-              href='#responsive-header'
+              href='/community'
               className='block mt-4 lg:inline-block lg:mt-0 text-green-100 hover:text-green-400 mr-4'
             >
               <span className='bg-left-bottom bg-gradient-to-r from-emerald-500 to-emerald-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
-                Resources
+                Community
               </span>
             </Link>
-  */}
             <Link
               href='/contact'
               className='block mt-4 lg:inline-block lg:mt-0 text-green-100 hover:text-green-400'
@@ -118,8 +116,8 @@ function Header() {
     <>
       <header>
         <nav
-          className='bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-stone-800/50
-        backdrop-filter backdrop-blur-xl dark:border-gray-700'
+          className='bg-white border-stone-200 px-4 lg:px-6 py-2.5 dark:bg-stone-800/50
+        backdrop-filter backdrop-blur-xl dark:border-stone-700'
         >
           <div className='flex flex-wrap justify-between items-center mx-auto max-w-screen-xl'>
             <Link href='https://flowbite.com' className='flex items-center'>
@@ -136,7 +134,7 @@ function Header() {
               <button
                 data-collapse-toggle='mobile-menu-2'
                 type='button'
-                className='inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-stone-700 dark:focus:ring-gray-600'
+                className='inline-flex items-center p-2 ml-1 text-sm text-stone-500 rounded-lg lg:hidden hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-200 dark:text-stone-400 dark:hover:bg-stone-700 dark:focus:ring-stone-600'
                 aria-controls='mobile-menu-2'
                 aria-expanded='false'
               >
@@ -184,7 +182,7 @@ function Header() {
                 <li>
                   <Link
                     href='#'
-                    className='block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-stone-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-green-100 dark:hover:bg-stone-700 dark:hover:text-green-100 lg:dark:hover:bg-transparent dark:border-gray-700'
+                    className='block py-2 pr-4 pl-3 text-stone-700 border-b border-stone-100 hover:bg-stone-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-stone-400 lg:dark:hover:text-green-100 dark:hover:bg-stone-700 dark:hover:text-green-100 lg:dark:hover:bg-transparent dark:border-stone-700'
                   >
                     Admin Team
                   </Link>
@@ -192,7 +190,7 @@ function Header() {
                 <li>
                   <Link
                     href='#'
-                    className='block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-stone-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-green-100 dark:hover:bg-stone-700 dark:hover:text-green-100 lg:dark:hover:bg-transparent dark:border-gray-700'
+                    className='block py-2 pr-4 pl-3 text-stone-700 border-b border-stone-100 hover:bg-stone-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-stone-400 lg:dark:hover:text-green-100 dark:hover:bg-stone-700 dark:hover:text-green-100 lg:dark:hover:bg-transparent dark:border-stone-700'
                   >
                     Merchandise
                   </Link>
@@ -200,7 +198,7 @@ function Header() {
                 <li>
                   <Link
                     href='#'
-                    className='block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-stone-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-green-100 dark:hover:bg-stone-700 dark:hover:text-green-100 lg:dark:hover:bg-transparent dark:border-gray-700'
+                    className='block py-2 pr-4 pl-3 text-stone-700 border-b border-stone-100 hover:bg-stone-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-stone-400 lg:dark:hover:text-green-100 dark:hover:bg-stone-700 dark:hover:text-green-100 lg:dark:hover:bg-transparent dark:border-stone-700'
                   >
                     Art
                   </Link>
@@ -208,7 +206,7 @@ function Header() {
                 <li>
                   <Link
                     href='#'
-                    className='block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-stone-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-green-100 dark:hover:bg-stone-700 dark:hover:text-green-100 lg:dark:hover:bg-transparent dark:border-gray-700'
+                    className='block py-2 pr-4 pl-3 text-stone-700 border-b border-stone-100 hover:bg-stone-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-stone-400 lg:dark:hover:text-green-100 dark:hover:bg-stone-700 dark:hover:text-green-100 lg:dark:hover:bg-transparent dark:border-stone-700'
                   >
                     Resources
                   </Link>
@@ -216,7 +214,7 @@ function Header() {
                 <li>
                   <Link
                     href='#'
-                    className='block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-stone-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-green-100 dark:hover:bg-stone-700 dark:hover:text-green-100 lg:dark:hover:bg-transparent dark:border-gray-700'
+                    className='block py-2 pr-4 pl-3 text-stone-700 border-b border-stone-100 hover:bg-stone-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-emerald-700 lg:p-0 dark:text-stone-400 lg:dark:hover:text-green-100 dark:hover:bg-stone-700 dark:hover:text-green-100 lg:dark:hover:bg-transparent dark:border-stone-700'
                   >
                     Contact
                   </Link>

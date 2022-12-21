@@ -42,7 +42,7 @@ function Values() {
               animate={inView ? "visible" : "hidden"}
               variants={variants}
               transition={{ duration: 0.5 }}
-              className='max-w-screen-lg m-0 text-gray-500 text-justify sm:text-lg dark:text-gray-400 mb-12'
+              className='max-w-screen-lg m-0 text-stone-500 text-justify sm:text-lg dark:text-stone-400 mb-12'
             >
               <h2 className='heading mb-4 text-4xl tracking-tight font-bold text-green-900 dark:text-green-300 text-center'>
                 The Values Of The Cobras
@@ -60,7 +60,7 @@ function Values() {
               animate={inView1 ? "visible" : "hidden"}
               variants={variants}
               transition={{ duration: 0.5 }}
-              className='max-w-screen-lg m-0 text-gray-500 text-justify sm:text-lg dark:text-gray-400'
+              className='max-w-screen-lg m-0 text-stone-500 text-justify sm:text-lg dark:text-stone-400'
             >
               <h3 className='heading mb-4 text-3xl tracking-tight font-bold text-green-900 dark:text-green-400 '>
                 41 Tenents Of Life By Andrew Tate

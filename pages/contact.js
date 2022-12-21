@@ -148,7 +148,7 @@ function Contact() {
                         type='email'
                         name='email'
                         id='email'
-                        className='bg-stone-50 border border-emerald-300 text-stone-900 sm:text-sm rounded-lg focus:ring-emerald-600 focus:border-emerald-600 block w-full p-2.5 dark:bg-stone-700/50 dark:border-emerald-600 dark:placeholder-stone-400 dark:text-green-100 dark:focus:ring-emerald-500 dark:focus:border-emerald-500'
+                        className='font-sans bg-stone-50 border border-emerald-300 text-stone-900 sm:text-sm rounded-lg focus:ring-emerald-600 focus:border-emerald-600 block w-full p-2.5 dark:bg-stone-700/50 dark:border-emerald-600 dark:placeholder-stone-400 dark:text-green-100 dark:focus:ring-emerald-500 dark:focus:border-emerald-500'
                         placeholder='
                         username@server.com
                         '
@@ -173,7 +173,7 @@ function Contact() {
                         <input
                           type='text'
                           id='default-input'
-                          className='bg-stone-50 border border-emerald-300 text-stone-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5 dark:bg-stone-700/50 dark:border-emerald-600 dark:placeholder-stone-400 dark:text-green-100 dark:focus:ring-emerald-500 dark:focus:border-emerald-500'
+                          className='font-sans bg-stone-50 border border-emerald-300 text-stone-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5 dark:bg-stone-700/50 dark:border-emerald-600 dark:placeholder-stone-400 dark:text-green-100 dark:focus:ring-emerald-500 dark:focus:border-emerald-500'
                           placeholder='What should we call you?'
                           onChange={(e) => setName(e.target.value)}
                         />
@@ -197,7 +197,7 @@ function Contact() {
                       <textarea
                         id='message'
                         rows='4'
-                        className='block p-2.5 w-full text-sm text-stone-900 bg-stone-50 rounded-lg border border-emerald-300 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-stone-700/50 dark:border-emerald-600 dark:placeholder-stone-400 dark:text-green-100 dark:focus:ring-emerald-500 dark:focus:border-emerald-500'
+                        className='font-sans block p-2.5 w-full text-sm text-stone-900 bg-stone-50 rounded-lg border border-emerald-300 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-stone-700/50 dark:border-emerald-600 dark:placeholder-stone-400 dark:text-green-100 dark:focus:ring-emerald-500 dark:focus:border-emerald-500'
                         placeholder='Describe your project in detail and we will get back to you as soon as possible.'
                         onChange={(e) => setMessage(e.target.value)}
                       ></textarea>

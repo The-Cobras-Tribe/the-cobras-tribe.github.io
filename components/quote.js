@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Typewriter } from "react-simple-typewriter";
 
 /* eslint-disable @next/next/no-img-element */
 function Quote() {
@@ -30,30 +30,6 @@ function Quote() {
     "Life without endeavor is like entering a jewel mine and coming out with empty hands.",
   ];
 
-  const [quote, setQuote] = useState(quotes[0]);
-
-  // change quote every 10 seconds
-  useEffect(() => {
-    // shuffle quotes
-    for (let i = quotes.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [quotes[i], quotes[j]] = [quotes[j], quotes[i]];
-    }
-
-    console.log(quotes);
-
-    let i = 0;
-    const interval = setInterval(() => {
-      setQuote(quotes[i]);
-      i++;
-      if (i >= quotes.length) {
-        i = 0;
-      }
-    }, 6000);
-    return () => clearInterval(interval);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
     <>
       <section className='bg-white dark:bg-stone-800/50 backdrop-filter backdrop-blur-lg'>
@@ -76,7 +52,19 @@ function Quote() {
             </svg>
 
             <blockquote>
-              <p className='text-2xl font-medium text-green-400'>{`"${quote}"`}</p>
+              <p className='text-2xl font-medium text-green-400'>
+                {'"'}
+                <Typewriter
+                  words={quotes}
+                  loop
+                  cursor
+                  cursorStyle='_'
+                  typeSpeed={100}
+                  deleteSpeed={20}
+                  delaySpeed={1000}
+                />
+                {'"'}
+              </p>
             </blockquote>
           </figure>
 
@@ -102,7 +90,7 @@ function Quote() {
             onClick={() => {
               window.open("https://www.netflix.com");
             }}
-            className='border-2 border-blue-400 rounded-full bg-blue-900 hover:bg-stone-900 text-white font-bold py-2 px-4 rounded transition duration-200 ease-in-out transform'
+            className='font-sans border-2 border-blue-400 rounded-full bg-blue-900 hover:bg-stone-900 text-white font-bold py-2 px-4 rounded transition duration-200 ease-in-out transform'
           >
             Blue Pill
           </button>
@@ -110,7 +98,7 @@ function Quote() {
             onClick={() => {
               window.location.href = "/values";
             }}
-            className='bg-red-900 border-2 border-red-400 rounded-full
+            className='font-sans bg-red-900 border-2 border-red-400 rounded-full
             hover:bg-stone-900 text-white font-bold py-2 px-4 rounded transition duration-200 ease-in-out all'
           >
             Red Pill
