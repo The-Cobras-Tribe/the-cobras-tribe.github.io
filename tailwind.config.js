@@ -12,7 +12,6 @@ module.exports = {
     fontFamily: {
       sans: ["Quantico", "sans-serif"],
     },
-    extend: {},
   },
   plugins: [require("flowbite/plugin"), require("@tailwindcss/typography")],
 };

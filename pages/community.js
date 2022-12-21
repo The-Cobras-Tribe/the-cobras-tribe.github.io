@@ -12,11 +12,11 @@ import {
   query,
   serverTimestamp,
 } from "firebase/firestore";
-import { useCollectionData } from "react-firebase-hooks/firestore";
+import { useCollection } from "react-firebase-hooks/firestore";
 import { getAuth } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Typewriter } from "react-simple-typewriter";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDlM5VUn3VT1y3kYLfCUl2TIoGjRWc59zA",
@@ -48,16 +48,9 @@ function Community() {
     setContent("");
   };
 
-  const [posts, postsLoading] = useCollectionData(
-    query(collection(db, "p"), orderBy("timestamp", "desc")),
-    {
-      idField: "id",
-    }
+  const [posts, postsLoading] = useCollection(
+    query(collection(db, "p"), orderBy("timestamp", "desc"))
   );
-
-  useEffect(() => {
-    console.log(posts);
-  }, [posts]);
 
   return (
     <>
@@ -77,7 +70,7 @@ function Community() {
       <main className='dark min-h-screen dark:bg-main flex justify-between flex-col'>
         <Header />
         <section
-          className='pt-4 flex flex-col items-center justify-between flex-1 px-20 text-center bg-stone-900/90 backdrop-filter backdrop-blur-lg
+          className='flex flex-col items-center justify-between flex-1 text-center bg-stone-900/90 backdrop-filter backdrop-blur-lg
         '
         >
           {!loading && !user && (
@@ -108,7 +101,7 @@ function Community() {
           )}
 
           {user && (
-            <div className='w-full grow flex flex-col flex-wrap items-center gap-8 max-w-4xl mt-6 sm:w-full'>
+            <div className='w-full grow flex flex-col flex-wrap items-center gap-8 max-w-4xl mt-0 lg:mt-6 md:mt-6 sm:w-full'>
               <div className='flex flex-col justify-center w-full p-6 bg-neutral-900 shadow-lg'>
                 <h1 className='text-4xl font-bold text-green-200'>
                   Create a post!
@@ -154,13 +147,14 @@ function Community() {
                   </h1>
                 )}
                 {posts &&
-                  posts.map((post) => (
+                  posts.docs &&
+                  posts.docs.map((post) => (
                     <Post
                       key={post.id}
                       id={post.id}
-                      content={post.content}
-                      authorId={post.authorId}
-                      timestamp={post.timestamp}
+                      content={post.data().content}
+                      authorId={post.data().authorId}
+                      timestamp={post.data().timestamp}
                     />
                   ))}
               </Stack>

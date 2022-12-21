@@ -22,7 +22,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
-function Post(props) {
+function Reply(props) {
   const { id, content, authorId } = props;
 
   const [author, loading] = useDocumentDataOnce(doc(db, "u", authorId));
@@ -37,24 +37,9 @@ function Post(props) {
 
   return (
     <>
-      <div
-        id={id}
-        className='flex flex-col justify-center w-full p-6 bg-neutral-900 shadow-lg'
-      >
-        {
-          // user info
-          author && (
-            <div className='flex flex-row items-center justify-between'>
-              <div className='flex flex-row items-center gap-2'>
-                <h6 className='text-md font-bold text-stone-700'>
-                  {author.name}
-                </h6>
-              </div>
-            </div>
-          )
-        }
+      <div id={id} className='flex flex-col justify-center w-full'>
         {loading && (
-          <h1>
+          <h7>
             Loading
             <span>
               <Typewriter
@@ -63,36 +48,25 @@ function Post(props) {
                 cursor={false}
               />
             </span>
-          </h1>
+          </h7>
         )}
 
-        <Spoiler
-          maxHeight={200}
-          showLabel='Show more'
-          hideLabel='Hide'
-          className='text-left'
-        >
-          <article
-            className='my-4 w-full prose prose-invert text-lg text-green-200
-            prose-headings:text-green-300 prose-p:text-green-200
-prose-a:text-green-600
-prose-blockquote:text-green-200
-prose-strong:text-green-200
-prose-em:text-green-200
-prose-code:text-emerald-200
-prose-pre:text-emerald-200
-prose-ol:text-green-200
-prose-ul:text-green-200
-prose-li:text-green-200
-prose-table:text-green-200'
-            dangerouslySetInnerHTML={{ __html: marked(content) }}
-          />
-          <hr className='mt-12 mb-4 border-stone-500' />
-          <Replies id={id} />
-        </Spoiler>
+        {
+          // user info
+          author && (
+            <div className='flex flex-row items-center justify-between'>
+              <div className='flex flex-row items-center gap-2'>
+                <p className='text-md font-bold text-stone-600'>
+                  {author.name} {" : "}{" "}
+                  <span className='text-green-200'>{content}</span>
+                </p>
+              </div>
+            </div>
+          )
+        }
       </div>
     </>
   );
 }
 
-export default Post;
+export default Reply;
