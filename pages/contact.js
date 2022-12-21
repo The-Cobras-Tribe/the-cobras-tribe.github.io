@@ -248,7 +248,6 @@ function Contact() {
                             "z2j_7TMCJIXUMebKV"
                           )
                           .then((result) => {
-                            console.log(result.text);
                             setIsButtonLoading(false);
                             setIsSuccess(true);
                             setEmail("");
@@ -256,7 +255,6 @@ function Contact() {
                             setMessage("");
                           })
                           .catch((error) => {
-                            console.log(error.text);
                             setIsFailure(true);
                           });
                       }}

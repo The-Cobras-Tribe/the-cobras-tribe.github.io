@@ -28,14 +28,6 @@ function Post(props) {
 
   const [author, loading] = useDocumentDataOnce(doc(db, "u", authorId));
 
-  useEffect(() => {
-    console.log(author);
-  }, [author]);
-
-  useEffect(() => {
-    console.log(marked(content));
-  }, [content]);
-
   return (
     <>
       <div

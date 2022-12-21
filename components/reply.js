@@ -27,14 +27,6 @@ function Reply(props) {
 
   const [author, loading] = useDocumentDataOnce(doc(db, "u", authorId));
 
-  useEffect(() => {
-    console.log(author);
-  }, [author]);
-
-  useEffect(() => {
-    console.log(marked(content));
-  }, [content]);
-
   return (
     <>
       <div id={id} className='flex flex-col justify-center w-full'>
