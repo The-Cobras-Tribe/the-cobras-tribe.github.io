@@ -46,7 +46,7 @@ function Reply(props) {
 
         {
           // user info
-          author && (
+          author && content && (
             <div className='flex flex-row items-center justify-between'>
               <div className='flex flex-row items-center gap-2'>
                 <p className='text-md font-bold text-stone-600'>

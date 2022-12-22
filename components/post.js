@@ -37,7 +37,7 @@ function Post(props) {
       >
         {
           // user info
-          author && (
+          author && timestamp && (
             <div className='flex flex-row items-center justify-between'>
               <div className='flex flex-row items-center gap-2'>
                 <h6 className='text-md font-bold text-stone-700'>
