@@ -96,6 +96,7 @@ function Replies(props) {
                   id={comment.id}
                   content={comment.content}
                   authorId={comment.authorId}
+                  timestamp={comment.timestamp}
                 />
               ))}
           </Stack>

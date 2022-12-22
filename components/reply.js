@@ -7,6 +7,7 @@ import { doc, getFirestore } from "firebase/firestore";
 import { useDocumentDataOnce } from "react-firebase-hooks/firestore";
 import { Typewriter } from "react-simple-typewriter";
 import Replies from "./replies";
+import moment from "moment";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDlM5VUn3VT1y3kYLfCUl2TIoGjRWc59zA",
@@ -23,7 +24,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
 function Reply(props) {
-  const { id, content, authorId } = props;
+  const { id, content, authorId, timestamp } = props;
 
   const [author, loading] = useDocumentDataOnce(doc(db, "u", authorId));
 
@@ -49,6 +50,8 @@ function Reply(props) {
             <div className='flex flex-row items-center justify-between'>
               <div className='flex flex-row items-center gap-2'>
                 <p className='text-md font-bold text-stone-600'>
+                  {"[ "}
+                  {moment(timestamp.toDate()).fromNow()} {" ]  "}
                   {author.name} {" : "}{" "}
                   <span className='text-green-200'>{content}</span>
                 </p>
