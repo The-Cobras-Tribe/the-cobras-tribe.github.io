@@ -8,6 +8,7 @@ import { useDocumentDataOnce } from "react-firebase-hooks/firestore";
 import { Typewriter } from "react-simple-typewriter";
 import Replies from "./replies";
 import Link from "next/link";
+import moment from "moment";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDlM5VUn3VT1y3kYLfCUl2TIoGjRWc59zA",
@@ -24,7 +25,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 
 function Post(props) {
-  const { id, content, authorId } = props;
+  const { id, content, authorId, timestamp } = props;
 
   const [author, loading] = useDocumentDataOnce(doc(db, "u", authorId));
 
@@ -41,6 +42,11 @@ function Post(props) {
               <div className='flex flex-row items-center gap-2'>
                 <h6 className='text-md font-bold text-stone-700'>
                   {author.name}
+                </h6>
+              </div>
+              <div>
+                <h6 className='text-md font-bold text-stone-700'>
+                  {moment(timestamp.toDate()).fromNow()}
                 </h6>
               </div>
               {/*
